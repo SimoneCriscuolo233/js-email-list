@@ -12,13 +12,40 @@
 
 
 <body>
-  <div class="container bg-primary my-5">
-    <div class="row">
-      <div class="col-12">
-        <ul class="list-unstyled" id="mail-list"></ul>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">Navbar</a>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container bg-light my-5">
+      <div class="row py-4">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <p>
+                <strong>
+                  Contact e-mails
+                </strong>
+              </p>
+            </div>
+            <ul class="list-unstyled list-group list-group-flush" id="mail-list"></ul>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <button id="submit-button" class="btn btn-success mt-4">Generate</button>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
