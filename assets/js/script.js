@@ -3,8 +3,8 @@ const list = document.getElementById("mail-list")
 const button = document.getElementById("submit-button")
 
 const mail = [];
-const generateMail = () => {
-  for (let i = 0; i < 10; i++) {
+const generateMail = (min) => {
+  for (let i = 0; i < min; i++) {
     axios.get(`https://flynn.boolean.careers/exercises/api/random/mail`).then((res) => {
       mail.push(res.data.response)
       list.innerHTML += `<li class="list-group-item">${mail[i]}</li>`
@@ -15,8 +15,8 @@ const generateMail = () => {
 
 button.addEventListener('click', () => {
   list.innerHTML = ``;
-  generateMail()
+  generateMail(10)
 })
 
 
-generateMail()
+generateMail(10)
