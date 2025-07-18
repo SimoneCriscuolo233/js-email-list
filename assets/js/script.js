@@ -15,6 +15,7 @@ const generateMail = (min) => {
 
 button.addEventListener('click', () => {
   list.innerHTML = ``;
+  mail.length = 0
   generateMail(10)
 })
 
